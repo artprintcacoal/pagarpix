@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PAGUE COM PIX</title>
+	<style>
+		body {
+			background-color: white;
+			text-align: center;
+			font-family: Arial, Arial;
+		}
+		h1 {
+			margin-top: 100px;
+			font-weight: normal;
+		}
+		p {
+			margin-top: 5px;
+			font-weight: normal;
+			text-transform: uppercase;
+		}
+		img {
+			max-width: 200px;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+		.code-container {
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.code {
+			margin-top: 10px;
+			font-size: 12px;
+			font-weight: normal;
+			display: inline-block;
+			padding: 10px;
+			border: 1px solid black;
+			background-color: #f2f2f2;
+			text-align: right;
+		}
+		.copy-btn {
+			margin-left: 10px;
+			padding: 10px 20px;
+			background-color: #1a1a1a;
+			color: white;
+			font-weight: normal;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.popup {
+			position: fixed;
+			bottom: -50px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #1a1a1a;
+			color: white;
+			padding: 10px;
+			border-radius: 5px;
+			z-index: 1;
+			transition: bottom 0.5s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<h1>PAGUE COM PIX</h1>
+	<p>1. Acesse seu Internet Banking ou app de pagamentos.</p>
+	<p>2. Escolha pagar via Pix.</p>
+    <p>3. Escaneie o código acima para pagar.</p>
+	<div class="code-container">
+        <img src="https://dummyimage.com/300x300/000/fff&text=QR+Code" alt="QR Code">
+    </div>
+    <p style="font-size: 12px;">Ou copie este código QR para fazer o pagamento</p>
+    <p style="font-size: 10px; text-transform: uppercase;">Escolha pagar via Pix pelo seu Internet Banking ou app de pagamentos.</p>
+  
+    <div class="code">
+        <span id="code-text">762ab1c4-56e1-457e-ae58-5e2a6713298c</span>
+        <button class="copy-btn" onclick="copyCode()">Copiar código</button>
+    </div>
+
+	<script>
+		function copyCode() {
+			var code = document.getElementById("code-text").textContent;
+			navigator.clipboard.writeText(code).then(function() {
+				alert("Código copiado com sucesso!");
+			}, function() {
+				alert("Erro ao copiar código.");
+			});
+		}
+	</script>
+  
+<a href="https://wa.me/5569992586575" target="_blank">
+    <img src="https://i.pinimg.com/736x/d9/4c/84/d94c840e027343fd954b971574b82601--novo-whatsapp-apps-android.jpg" alt="WhatsApp" width="50" height="50">
+</a>
+</body>
+</html>
